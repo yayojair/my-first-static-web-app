@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './index.html',
-  styleUrls: ['./styles.css']
+  templateUrl: '.src/index.html',
+  styleUrls: ['.src/styles.css']
 })
 export class AppComponent {
   subir() {
