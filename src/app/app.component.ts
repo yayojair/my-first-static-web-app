@@ -27,8 +27,16 @@ export class AppComponent {
   }
 
   marcarUrgente() {
-    console.log('Tarea marcada como urgente');
-    // lógica para marcar como urgente
+    const tarea = {
+      titulo: 'Tarea urgente',
+      descripcion: 'Requiere atención inmediata',
+      urgente: true
+    };
+
+    this.tareasService.crearTarea(tarea).subscribe({
+      next: (res) => console.log('Tarea urgente creada:', res),
+      error: (err) => console.error('Error al crear urgente:', err)
+    });
   }
 }
 
