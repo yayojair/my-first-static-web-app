@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TareasService } from './services/tareas.service';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private tareasService: TareasService) {}
+
   subir() {
-    console.log('Subir tarea');
-    // lógica para subir
+    const nuevaTarea = {
+      titulo: 'Leer documentación',
+      urgente: false
+    };
+
+    this.tareasService.crearTarea(nuevaTarea).subscribe({
+      next: res => console.log('Tarea creada:', res),
+      error: err => console.error('Error:', err)
+    });
   }
 
   eliminar() {
