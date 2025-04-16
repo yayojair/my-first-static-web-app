@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TareasService {
-  private apiUrl = 'https://demomiapim.azure-api.net/demomifuntion'; // URL expuesta por APIM
+  private apiUrl = 'https://demomiapim.azure-api.net/demomifuntion/http_trigger'; // URL expuesta por APIM
 
   constructor(private http: HttpClient) {}
 
