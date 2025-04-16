@@ -5,14 +5,14 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TareasService {
-  private apiUrl = 'https://demomiapim.azure-api.net/demomifuntion'; // URL expuesta por APIM
+  private apiUrl = 'https://demomiapim.azure-api.net/demomifuction/http_trigger'; // URL expuesta por APIM
 
   constructor(private http: HttpClient) {}
 
   crearTarea(tarea: any) {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Ocp-Apim-Subscription-Key': '9fddd56480f146ddae173e70ddb04697'  // Si usas API Key en APIM
+      'Ocp-Apim-Subscription-Key': '0e5b03a6b1334a169e387eff5c10e926'  // Si usas API Key en APIM
     });
 
     return this.http.post(this.apiUrl, tarea, { headers });
