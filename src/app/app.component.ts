@@ -11,8 +11,8 @@ export class AppComponent {
 
   subir() {
     const nuevaTarea = {
-      "nombre": 'cuaderno',
-      "precio": 198
+      "nombre": 'laptop',
+      "precio": 25000
     };
 
     this.tareasService.crearTarea(nuevaTarea).subscribe({
