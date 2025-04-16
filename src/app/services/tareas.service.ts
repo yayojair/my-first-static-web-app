@@ -11,7 +11,7 @@ export class TareasService {
 
   crearTarea(tarea: any) {
     const headers = new HttpHeaders({
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
       'Ocp-Apim-Subscription-Key': '9fddd56480f146ddae173e70ddb04697'  // Si usas API Key en APIM
     });
 
