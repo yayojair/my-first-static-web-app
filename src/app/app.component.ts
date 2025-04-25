@@ -8,19 +8,25 @@ import { TareasService } from './services/tareas.service';
 })
 export class AppComponent {
   constructor(private tareasService: TareasService) {}
-
   subir() {
-    const nuevaTarea = {
-      "nombre": 'laptop',
-      "precio": 25000
+    const titulo = (document.getElementById("titulo") as HTMLInputElement).value;
+    const descripcion = (document.getElementById("descripcion") as HTMLInputElement).value;
+    const prioridad = (document.getElementById("prioridad") as HTMLSelectElement).value;
+    const fecha = (document.getElementById("fecha") as HTMLInputElement).value;
+
+    const tarea = {
+      titulo,
+      descripcion,
+      prioridad,
+      fechaLimite: fecha
     };
 
-    this.tareasService.crearTarea(nuevaTarea).subscribe({
+    this.tareasService.crearTarea(tarea).subscribe({
       next: res => console.log('Tarea creada:', res),
       error: err => console.error('Error:', err)
     });
   }
-
+/*
   eliminar() {
     console.log('Eliminar tarea');
     // lógica para eliminar
@@ -37,7 +43,7 @@ export class AppComponent {
       next: (res) => console.log('Tarea urgente creada:', res),
       error: (err) => console.error('Error al crear urgente:', err)
     });
-  }
+  }*/
 }
 
 
