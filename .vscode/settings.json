@@ -1,3 +1,6 @@
 {
-    "staticWebApps.outputSubpath": "dist/angular-basic"
+    "staticWebApps.outputSubpath": "dist/angular-basic",
+    "editor.cursorStyle": "line",
+    "editor.renderWhitespace": "none",
+    "workbench.preferredLightColorTheme": "Abyss"
 }
