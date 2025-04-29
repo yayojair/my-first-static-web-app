@@ -12,7 +12,7 @@ export class TareasService {
   crearTarea(tarea: any) {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Ocp-Apim-Subscription-Key': '2b25703e2f6a4d76bdc64cbc1cffd486'  // Si usas API Key en APIM
+      'Ocp-Apim-Subscription-Key': '48daae1b94104595806de42c1ffd8ba5'  // Si usas API Key en APIM
     });
 
     return this.http.post(this.apiUrl, tarea, { headers });
