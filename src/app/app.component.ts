@@ -8,6 +8,11 @@ import { TareasService } from './services/tareas.service';
 })
 export class AppComponent {
   constructor(private tareasService: TareasService) {}
+  limpiarCampos() {
+    document.getElementById('descripcion').value = '';
+    document.getElementById('prioridad').value = 'Bajo';
+    document.getElementById('fecha').value = '';
+  }
   subir() {
     const descripcion = (document.getElementById("descripcion") as HTMLInputElement).value;
     const prioridad = (document.getElementById("prioridad") as HTMLSelectElement).value;
@@ -18,7 +23,7 @@ export class AppComponent {
       prioridad,
       fechaLimite: fecha
     };
-
+    this.limpiarCampos()
     this.tareasService.crearTarea(tarea).subscribe({
       next: res => console.log('Tarea creada:', res),
       error: err => console.error('Error:', err)
