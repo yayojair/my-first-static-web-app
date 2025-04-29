@@ -9,13 +9,11 @@ import { TareasService } from './services/tareas.service';
 export class AppComponent {
   constructor(private tareasService: TareasService) {}
   subir() {
-    const titulo = (document.getElementById("titulo") as HTMLInputElement).value;
     const descripcion = (document.getElementById("descripcion") as HTMLInputElement).value;
     const prioridad = (document.getElementById("prioridad") as HTMLSelectElement).value;
     const fecha = (document.getElementById("fecha") as HTMLInputElement).value;
 
     const tarea = {
-      titulo,
       descripcion,
       prioridad,
       fechaLimite: fecha

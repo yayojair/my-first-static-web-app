@@ -1,25 +1,21 @@
 <div id="panel">
-    <h2>Acciones disponibles</h2>
-  
-    <label for="titulo">Título</label>
-    <input type="text" id="titulo" name="titulo" placeholder="Ej. Resolver incidente" />
-  
-    <label for="descripcion">Descripción</label>
-    <input type="text" id="descripcion" name="descripcion" placeholder="Ej. El sistema no responde..." />
-  
-    <label for="prioridad">Prioridad</label>
-    <select id="prioridad" name="prioridad">
-      <option value="Baja">Baja</option>
-      <option value="Media">Media</option>
-      <option value="Alta">Alta</option>
-      <option value="Urgente">Urgente</option>
-    </select>
-  
-    <label for="fecha">Fecha límite</label>
-    <input type="date" id="fecha" name="fecha" />
-  
-    <button (click)="subir()">Subir</button>
-  </div>
+  <h1>Comprar comida</h1>
+
+  <label for="descripcion">Descripción</label>
+  <input type="text" id="descripcion" name="descripcion" placeholder="Ej. El sistema no responde..." />
+
+  <label for="prioridad">Prioridad</label>
+  <select id="prioridad" name="prioridad">
+    <option value="Baja">Baja</option>
+    <option value="Media">Media</option>
+    <option value="Alta">Alta</option>
+  </select>
+
+  <label for="fecha">Fecha límite</label>
+  <input type="date" id="fecha" name="fecha" />
+
+  <button (click)="subir()">Subir</button>
+</div>
 <!-- <button (click)="eliminar()">Eliminar</button> -->
 <!--<button class="urgente" (click)="marcarUrgente()">Urgente</button>-->
 
