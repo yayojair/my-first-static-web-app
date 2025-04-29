@@ -9,9 +9,9 @@ import { TareasService } from './services/tareas.service';
 export class AppComponent {
   constructor(private tareasService: TareasService) {}
   limpiarCampos() {
-    document.getElementById('descripcion').value = '';
-    document.getElementById('prioridad').value = 'Bajo';
-    document.getElementById('fecha').value = '';
+    (document.getElementById('descripcion') as HTMLInputElement).value = '';
+    (document.getElementById('prioridad') as HTMLSelectElement).value = 'Baja';
+    (document.getElementById('fecha') as HTMLInputElement).value = '';
   }
   subir() {
     const descripcion = (document.getElementById("descripcion") as HTMLInputElement).value;
